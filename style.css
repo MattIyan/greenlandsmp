@@ -274,16 +274,25 @@ body{
 /* SCROLL */
 
 .scroll-down{
-
     position:absolute;
+    left:50%;
+    bottom:20px;
+    transform:translateX(-50%);
+    text-align:center;
+    color:#fff;
+    opacity:.85;
+}
 
-    bottom:30px;
-
-    font-size:15px;
-
+.scroll-down .arrow{
+    display:block;
+    font-size:28px;
     animation:bounce 2s infinite;
+}
 
-    opacity:.8;
+.scroll-down p{
+    margin-top:4px;
+    font-size:14px;
+}
 
 }
 
