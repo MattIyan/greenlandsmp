@@ -294,8 +294,6 @@ body{
     font-size:14px;
 }
 
-}
-
 /* FEATURES */
 
 .features{
@@ -507,83 +505,71 @@ footer{
    MOBILE
 =========================== */
 
-@media (max-width: 900px){
+@media (max-width:900px){
 
     /* NAVBAR */
 
     .navbar{
         padding:15px 20px;
         flex-direction:column;
-        gap:18px;
+        gap:15px;
     }
 
-    /* LOGO */
-
     .logo{
-        justify-content:center;
         width:100%;
+        justify-content:center;
         gap:12px;
     }
 
     .logo-box{
-        width:55px;
-        height:55px;
+        width:58px;
+        height:58px;
         font-size:24px;
-        border-radius:14px;
-    }
-
-    .logo-text{
-        text-align:left;
     }
 
     .logo-text h2{
         font-size:22px;
+        line-height:1.1;
         white-space:nowrap;
-        line-height:1;
     }
 
     .logo-text span{
         font-size:13px;
     }
 
-    /* NAVIGATION */
-
     .nav-links{
-        width:100%;
         display:grid;
         grid-template-columns:repeat(3,1fr);
         gap:15px;
+        width:100%;
         text-align:center;
     }
 
     .nav-links a{
-        font-size:16px;
+        font-size:17px;
     }
 
     /* HERO */
 
     .hero{
+        min-height:115vh;
         background-position:center;
     }
 
     .hero-content{
-        padding:220px 20px 70px;
-    }
-
-    .launch-banner{
-        font-size:14px;
-        padding:8px 18px;
+        padding:260px 20px 90px;
     }
 
     .hero-content h1{
-        font-size:56px;
-        line-height:1;
+        font-size:clamp(38px,9vw,58px);
+        line-height:1.05;
+        white-space:nowrap;
     }
 
     .hero-content p{
         font-size:18px;
         line-height:1.5;
-        max-width:320px;
+        max-width:330px;
     }
 
     /* BADGES */
@@ -594,8 +580,10 @@ footer{
     }
 
     .hero-badges span{
+        width:calc(50% - 10px);
+        text-align:center;
         font-size:14px;
-        padding:10px 16px;
+        padding:12px;
     }
 
     /* BUTTONS */
@@ -603,20 +591,30 @@ footer{
     .buttons{
         flex-direction:column;
         width:100%;
-        max-width:300px;
+        max-width:320px;
+        gap:15px;
     }
 
     .buttons button{
         width:100%;
         padding:16px;
-        font-size:16px;
     }
 
     /* SCROLL */
 
     .scroll-down{
-        font-size:13px;
-        bottom:20px;
+        position:relative;
+        left:auto;
+        bottom:auto;
+        transform:none;
+        margin-top:30px;
+        text-align:center;
+        width:100%;
+        font-size:14px;
+    }
+
+    .scroll-down .arrow{
+        font-size:22px;
     }
 
     /* FEATURES */
@@ -627,27 +625,37 @@ footer{
 
     .features h2{
         font-size:30px;
-        margin-bottom:35px;
     }
 
     .card{
+        padding:24px;
+    }
+
+    /* RULES */
+
+    .rules-card{
         padding:25px;
     }
 
+    .rule p{
+        font-size:16px;
+    }
+
+    /* VIDEO */
+
     .video-section{
-    padding:70px 20px;
-}
+        padding:70px 20px;
+    }
 
-.video-section h2{
-    font-size:30px;
-}
+    .video-section h2{
+        font-size:30px;
+    }
 
-.video-section p{
-    font-size:16px;
-}
+    .video-section p{
+        font-size:16px;
+    }
 
-.video-container{
-    border-radius:14px;
-}
-
+    .video-container{
+        border-radius:14px;
+    }
 }
