@@ -387,15 +387,20 @@ body{
 /* FOOTER */
 
 footer{
-
     background:#090c11;
-
-    padding:45px;
-
+    padding:40px 20px;
     text-align:center;
-
     color:#999;
+}
 
+.credit{
+    margin-top:10px;
+    font-size:14px;
+    color:#777;
+}
+
+.credit strong{
+    color:#6BE675;
 }
 
 /* RULES */
