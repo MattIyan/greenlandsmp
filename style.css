@@ -1110,3 +1110,208 @@ footer{
     }
 
 }
+
+/* =========================
+   OWNER STAFF CARD
+========================= */
+
+.owner-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(107,230,117,.18),
+            rgba(27,36,51,.95)
+        );
+
+    border: 1px solid rgba(107,230,117,.45);
+
+    box-shadow:
+        0 0 30px rgba(107,230,117,.12),
+        inset 0 0 30px rgba(107,230,117,.04);
+}
+
+.owner-card::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -90px;
+
+    background: #6BE675;
+    border-radius: 50%;
+
+    filter: blur(70px);
+    opacity: .18;
+}
+
+.owner-role {
+    position: relative;
+
+    color: #6BE675;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.staff-name {
+    position: relative;
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.staff-badge {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(107,230,117,.12);
+
+    border: 1px solid rgba(107,230,117,.3);
+
+    color: #6BE675;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.owner-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #6BE675;
+
+    box-shadow:
+        0 0 35px rgba(107,230,117,.3),
+        inset 0 0 30px rgba(107,230,117,.08);
+}
+
+/* =========================
+   STAFF CARD
+========================= */
+
+.staff-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(88,101,242,.18),
+            rgba(27,36,51,.95)
+        );
+
+    border: 1px solid rgba(88,101,242,.45);
+
+    box-shadow:
+        0 0 30px rgba(88,101,242,.12),
+        inset 0 0 30px rgba(88,101,242,.04);
+}
+
+/* Blue glow */
+
+.staff-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -90px;
+
+    background: #5865F2;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: .18;
+}
+
+/* STAFF TITLE */
+
+.staff-role-color {
+    position: relative;
+
+    color: #8b9aff;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+/* STAFF NAMES */
+
+.staff-card .staff-name {
+    position: relative;
+
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+/* STAFF BADGE */
+
+.staff-badge-color {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(88,101,242,.12);
+
+    border: 1px solid rgba(88,101,242,.35);
+
+    color: #8b9aff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+/* HOVER */
+
+.staff-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #5865F2;
+
+    box-shadow:
+        0 0 35px rgba(88,101,242,.3),
+        inset 0 0 30px rgba(88,101,242,.08);
+}
