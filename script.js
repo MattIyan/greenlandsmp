@@ -6,81 +6,81 @@ const playNow = document.getElementById("playNow");
 const playModal = document.getElementById("playModal");
 const closeModal = document.getElementById("closeModal");
 
+if (playNow && playModal) {
 
-/* OPEN MODAL */
+    playNow.addEventListener("click", () => {
+        playModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    });
 
-playNow.addEventListener("click", () => {
+}
 
-    playModal.classList.add("active");
+if (closeModal && playModal) {
 
-});
-
-
-/* CLOSE MODAL */
-
-closeModal.addEventListener("click", () => {
-
-    playModal.classList.remove("active");
-
-});
-
-
-/* CLOSE WHEN CLICKING OUTSIDE */
-
-playModal.addEventListener("click", (event) => {
-
-    if(event.target === playModal){
-
+    closeModal.addEventListener("click", () => {
         playModal.classList.remove("active");
+        document.body.style.overflow = "";
+    });
 
-    }
-
-});
+}
 
 
-/* CLOSE WITH ESCAPE KEY */
+/* Close when clicking outside */
+
+if (playModal) {
+
+    playModal.addEventListener("click", (event) => {
+
+        if (event.target === playModal) {
+
+            playModal.classList.remove("active");
+
+            document.body.style.overflow = "";
+        }
+
+    });
+
+}
+
+
+/* Close with ESC */
 
 document.addEventListener("keydown", (event) => {
 
-    if(event.key === "Escape"){
+    if (event.key === "Escape" && playModal) {
 
         playModal.classList.remove("active");
 
+        document.body.style.overflow = "";
     }
 
 });
 
 
 /* =========================
-   COPY SERVER INFORMATION
+   COPY IP
 ========================= */
 
-function copyText(text, button){
+function copyText(text, button) {
 
-    navigator.clipboard.writeText(text)
-        .then(() => {
+    navigator.clipboard.writeText(text).then(() => {
 
-            const originalText = button.innerText;
+        const originalText = button.innerText;
 
-            button.innerText = "Copied!";
+        button.innerText = "✓ Copied!";
 
-            setTimeout(() => {
+        setTimeout(() => {
+            button.innerText = originalText;
+        }, 1500);
 
-                button.innerText = originalText;
+    }).catch(() => {
 
-            },1500);
+        button.innerText = "Copy failed";
 
-        })
-        .catch(() => {
+        setTimeout(() => {
+            button.innerText = "Copy";
+        }, 1500);
 
-            button.innerText = "Copy failed";
-
-            setTimeout(() => {
-
-                button.innerText = "Copy";
-
-            },1500);
-
-        });
+    });
 
 }
